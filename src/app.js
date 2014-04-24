@@ -5,7 +5,7 @@ $(document).ready(function jeansDay() {
   var dayOfWeek = new Date().getDay();
   var answer = '';
   
-  if (dayOfWeek === 5 && !onList(blacklist, currentDate)) {
+  if ((dayOfWeek === 0 || dayOfWeek >= 5) && !onList(blacklist, currentDate)) {
     answer = 'YES!';
   } else if (onList(whitelist, currentDate)) {
     answer = 'YES!';
