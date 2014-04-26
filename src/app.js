@@ -1,9 +1,15 @@
 $(document).ready(function jeansDay() {
   var whitelist = 'data/whitelist.json'
   var blacklist = 'data/blacklist.json'
-  var currentDate = getCurrentDate();
-  var dayOfWeek = new Date().getDay();
   var answer = '';
+  var oneIfTomorrow = 0;
+
+  if (document.URL === "/tomorrow.html") {
+    oneIfTomorrow = 1;
+  } 
+
+  var currentDate = getCurrentDate(oneIfTomorrow);
+  var dayOfWeek = new Date().getDay();
   
   if ((dayOfWeek === 0 || dayOfWeek >= 5) && !onList(blacklist, currentDate)) {
     answer = 'YES!';
@@ -44,11 +50,11 @@ function getJsonData(path) {
   return json;
 }
 
-function getCurrentDate() {
+function getCurrentDate(oneIfTomorrow) {
   // This function comes from http://stackoverflow.com/a/4929629/1451531
   var today = new Date();
-  var dd = today.getDate();
-  var mm = today.getMonth()+1; //January is 0!
+  var dd = today.getDate() + oneIfTomorrow;
+  var mm = today.getMonth() + 1; //January is 0!
   var yyyy = today.getFullYear();
 
   if(dd<10) {
