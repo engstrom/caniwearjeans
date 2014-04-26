@@ -10,9 +10,19 @@ body {
 
 h1 {
   font-size: 1.1em;
-  padding-top: 10px;
+  padding-top: .6em;
 }
 
 p {
   font-size: 7em;
+}
+
+footer a{ 
+   text-decoration: none;
+   margin: .7em;
+}
+
+.active {
+  border-bottom: 1px solid #000;
+  padding-bottom: 3px;
 }
