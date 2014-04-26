@@ -4,13 +4,13 @@ $(document).ready(function jeansDay() {
   var answer = '';
   var oneIfTomorrow = 0;
 
-  if (document.URL === "/tomorrow.html") {
+  if (window.location.pathname === "/tomorrow.html") {
     oneIfTomorrow = 1;
   } 
 
   var currentDate = getCurrentDate(oneIfTomorrow);
-  var dayOfWeek = new Date().getDay();
-  
+  var dayOfWeek = new Date().getDay() + oneIfTomorrow;
+
   if ((dayOfWeek === 0 || dayOfWeek >= 5) && !onList(blacklist, currentDate)) {
     answer = 'YES!';
   } else if (onList(whitelist, currentDate)) {

@@ -4,14 +4,15 @@ html, body {
 
 body {
   text-align: center;
-  font-family: "Times New Roman", Times, serif
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16pt;
 }
 
 h1 {
-  font-size: 16pt;
+  font-size: 1.1em;
   padding-top: 10px;
 }
 
 p {
-  font-size: 100pt;
+  font-size: 7em;
 }
