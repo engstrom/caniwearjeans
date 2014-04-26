@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Dustin Engstrom -- https://github.com/engstrom/
+
+# THANKS
+
+    - Samuel Meddows on StackOverflow for the getCurrentDate function.
+    - http://www.fatcow.com/free-icons for the favicon
+    - http://icons.mysitemyway.com/ for the apple-touch-icon
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, jQuery
